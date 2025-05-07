@@ -5,7 +5,7 @@
 - Intro
 - Figma
 - Images
-- live link
+- links
 
 **Intro**
 
@@ -20,6 +20,7 @@ This project is made so all the elements are displayed correctly on popular scre
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
 
 **Link**
-[https://github.com/castaneda012/se_project_spots]
+Link to Project [https://github.com/castaneda012/se_project_spots]
+Link to video [https://drive.google.com/file/d/15XktWubFFfpXTkQEJwSEpGAE5k-rzW8F/view?usp=sharing]
 
 Good luck and have fun!
