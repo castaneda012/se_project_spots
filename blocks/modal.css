@@ -105,6 +105,11 @@
   padding: 18px 32px;
 }
 
+.modal__sumbit-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
+  cursor: pointer;
+}
+
 .modal__image-container {
   position: relative;
 }
