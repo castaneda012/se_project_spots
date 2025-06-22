@@ -30,7 +30,7 @@
   color: #212121;
 }
 
-.profile__discription {
+.profile__description {
   margin: 0;
   font-weight: 500;
   font-size: 16px;
@@ -113,7 +113,7 @@
     max-width: 288px;
   }
 
-  .profile__discription {
+  .profile__description {
     margin: 0 0 32px;
     max-width: 288px;
   }

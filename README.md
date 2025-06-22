@@ -1,26 +1,43 @@
 # Project 3: Spots
 
-### Overview
+## 📚 Overview
 
-- Intro
-- Figma
-- Images
-- links
+This responsive web project is built to ensure that all elements are displayed correctly across popular screen sizes. It focuses on applying layout best practices, responsiveness, and precision in design implementation. Compared to previous projects, this one is more challenging and is designed to mimic real-world development tasks.
 
-**Intro**
+---
 
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+## 🎨 Figma Design
 
-**Figma**
+- [🖼️ View Figma Project](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
 
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+---
 
-**Images**
+## 🖼️ Images
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
+Images used in this project were exported directly from Figma to simulate real workflow conditions. For best performance, all images were optimized using [TinyPNG](https://tinypng.com/).
 
-**Link**
-Link to Project [https://castaneda012.github.io/se_project_spots/] (https://castaneda012.github.io/se_project_spots/)
-Link to video [https://drive.google.com/file/d/15XktWubFFfpXTkQEJwSEpGAE5k-rzW8F/view?usp=sharing] (https://drive.google.com/file/d/15XktWubFFfpXTkQEJwSEpGAE5k-rzW8F/view?usp=sharing)
+---
 
-Good luck and have fun!
+## 🚀 Project Links
+
+- 🌐 [Live Website](https://castaneda012.github.io/se_project_spots/)
+- 🎥 [Demo Video](https://drive.google.com/file/d/15XktWubFFfpXTkQEJwSEpGAE5k-rzW8F/view?usp=sharing)
+
+---
+
+## ✅ Goal
+
+> Deliver a polished, responsive web layout using modern HTML, CSS, and accessibility best practices. Learn to translate Figma designs into code with precision.
+
+---
+
+## 🔧 Tech Stack
+
+- HTML5
+- CSS3
+- BEM Methodology
+- Figma-to-code implementation
+
+---
+
+## 🙌 Good luck and have fun building!

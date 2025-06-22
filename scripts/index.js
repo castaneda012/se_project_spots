@@ -53,7 +53,7 @@ const previewImageEl = previewModal.querySelector(".modal__image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
 
 const profileNameEl = document.querySelector(".profile__name");
-const profileDescriptionEl = document.querySelector(".profile__discription");
+const profileDescriptionEl = document.querySelector(".profile__description");
 
 const cardTemplate = document
   .querySelector("#card-template")
