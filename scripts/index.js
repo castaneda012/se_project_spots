@@ -59,6 +59,7 @@ const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
+const cardSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -100,6 +101,11 @@ function closeModal(modal) {
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(
+    editProfileForm,
+    [editProfileNameInput, editProfileDescriptionInput],
+    settings
+  );
   openModal(editProfileModal);
 });
 
@@ -128,6 +134,7 @@ function handleEditProfileSubmit(evt) {
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
+  disableButton(cardSubmitBtn, settings);
 
   const inputValues = {
     name: newPostCaptionInput.value,
