@@ -95,6 +95,12 @@
   font-weight: 500;
 }
 
+.modal__error_visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s ease-in-out;
+}
+
 .modal__input:hover {
   border-color: rgba(33, 33, 33, 1);
   cursor: pointer;
@@ -155,14 +161,14 @@
   color: white;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   background-image: url(../images/preview-close-btn.png);
   opacity: 100;
   top: 0;
   right: -52.5px;
 }
 
-.modal__close_type_preview:hover {
+.modal__close-btn_type_preview:hover {
   opacity: 40%;
   cursor: pointer;
 }

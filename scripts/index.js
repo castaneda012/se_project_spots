@@ -44,7 +44,7 @@ const newPostButton = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
-const newPostlinkInput = newPostModal.querySelector("#card-image-input");
+const newPostLinkInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
 
 const previewModal = document.querySelector("#preview-modal");
@@ -90,17 +90,37 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscapeClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
+function handleOverlayClick(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeClose);
+  modal.addEventListener("mousedown", handleOverlayClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeClose);
+  modal.removeEventListener("mousedown", handleOverlayClick);
 }
 
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  const inputList = [editProfileNameInput, editProfileDescriptionInput];
   resetValidation(
     editProfileForm,
     [editProfileNameInput, editProfileDescriptionInput],
@@ -138,7 +158,7 @@ function handleNewPostSubmit(evt) {
 
   const inputValues = {
     name: newPostCaptionInput.value,
-    link: newPostlinkInput.value,
+    link: newPostLinkInput.value,
   };
 
   const cardElement = getCardElement(inputValues);
