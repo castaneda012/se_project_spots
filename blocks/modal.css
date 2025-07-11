@@ -25,6 +25,7 @@
 }
 
 .modal__container {
+  box-sizing: border-box;
   max-width: 790px;
   width: 100%;
   border-radius: 8px;
@@ -74,6 +75,7 @@
 }
 
 .modal__input {
+  box-sizing: border-box;
   display: block;
   margin: 8px 0 0;
   width: 100%;
@@ -187,7 +189,7 @@
     height: 40px;
   }
 
-  .modal__close_type_preview {
+  .modal__close-btn_type_preview {
     top: -48px;
     right: 0;
   }
