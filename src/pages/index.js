@@ -218,13 +218,20 @@ function handleEditProfileSubmit(evt) {
 
   const originalBtnText = editProfileSubmitBtn.textContent;
   editProfileSubmitBtn.textContent = "Saving...";
-  editProfileSubmitBtn.disabled = true;
 
   api
     .editUserInfo({ name: newName, about: newAbout })
     .then((user) => {
       profileNameEl.textContent = user.name;
       profileDescriptionEl.textContent = user.about;
+
+      resetValidation(
+        editProfileForm,
+        [editProfileNameInput, editProfileDescriptionInput],
+        settings
+      );
+      disableButton(editProfileSubmitBtn, settings);
+
       closeModal(editProfileModal);
     })
     .catch((err) => {
@@ -232,7 +239,6 @@ function handleEditProfileSubmit(evt) {
     })
     .finally(() => {
       editProfileSubmitBtn.textContent = originalBtnText;
-      editProfileSubmitBtn.disabled = false;
     });
 }
 
@@ -241,7 +247,6 @@ function handleNewPostSubmit(evt) {
 
   const originalBtnText = cardSubmitBtn.textContent;
   cardSubmitBtn.textContent = "Saving...";
-  cardSubmitBtn.disabled = true;
 
   api
     .addCard({
@@ -254,13 +259,19 @@ function handleNewPostSubmit(evt) {
 
       newPostForm.reset();
       closeModal(newPostModal);
+
+      resetValidation(
+        newPostForm,
+        [newPostLinkInput, newPostCaptionInput],
+        settings
+      );
+      disableButton(cardSubmitBtn, settings);
     })
     .catch((err) => {
       console.error(err);
     })
     .finally(() => {
       cardSubmitBtn.textContent = originalBtnText;
-      cardSubmitBtn.disabled = false;
     });
 }
 
@@ -270,7 +281,6 @@ function handleAvatarSubmit(evt) {
 
   const original = avatarSubmitBtn.textContent;
   avatarSubmitBtn.textContent = "Saving...";
-  avatarSubmitBtn.disabled = true;
 
   api
     .editAvatar(url)
@@ -279,11 +289,13 @@ function handleAvatarSubmit(evt) {
       profileAvatarEl.alt = `${user.name} avatar`;
       avatarForm.reset();
       closeModal(avatarModal);
+
+      resetValidation(avatarForm, [avatarInput], settings);
+      disableButton(avatarSubmitBtn, settings);
     })
     .catch(console.error)
     .finally(() => {
       avatarSubmitBtn.textContent = original;
-      avatarSubmitBtn.disabled = false;
     });
 }
 
@@ -293,7 +305,6 @@ function handleDeleteSubmit(e) {
 
   const original = deleteSubmitBtn.textContent;
   deleteSubmitBtn.textContent = "Deleting...";
-  deleteSubmitBtn.disabled = true;
 
   api
     .removeCard(selectedCardId)
@@ -305,7 +316,6 @@ function handleDeleteSubmit(e) {
     .catch(console.error)
     .finally(() => {
       deleteSubmitBtn.textContent = original;
-      deleteSubmitBtn.disabled = false;
     });
 }
 
